@@ -122,3 +122,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   destroyOnDeath: 1
+  targetType: 0
+  dropCatalog: {fileID: 11400000, guid: a27adfb553741ff489f1bfb494782ee9, type: 2}

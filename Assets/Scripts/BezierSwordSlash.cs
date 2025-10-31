@@ -5,7 +5,7 @@ using System.Linq;
 public class BezierSwordSlash : MonoBehaviour
 {
     [Header("Refs")]
-    public Transform sword;                       // child of your camera pivot / weapon pivot
+    public Transform sword;
     public Transform[] controlPoints = new Transform[5];
 
     [Header("Playback")]
@@ -26,12 +26,12 @@ public class BezierSwordSlash : MonoBehaviour
 
     void Update()
     {
-        // Only slash when LMB pressed
+        
         if (Input.GetMouseButtonDown(0) && !_slashing)
             StartCoroutine(SlashRoutine());
     }
 
-    // --- Bézier helpers (De Casteljau) ---
+    // --- conmpute Bézier curve ---
     static Vector3 BezierEvaluate(Vector3[] pts, float t)
     {
         var p = (Vector3[])pts.Clone();
@@ -50,7 +50,7 @@ public class BezierSwordSlash : MonoBehaviour
     {
         _slashing = true;
 
-        // Convert control points to LOCAL space of the weapon pivot so it’s view-relative
+        // remember loacal positions of control points
         var localPts = controlPoints.Select(p => transform.InverseTransformPoint(p.position)).ToArray();
 
         float t = 0f;
@@ -71,7 +71,7 @@ public class BezierSwordSlash : MonoBehaviour
             yield return null;
         }
 
-        // Return to idle pose
+        // return to original state
         float r = 0f;
         Vector3 startPos = sword.localPosition;
         Quaternion startRot = sword.localRotation;

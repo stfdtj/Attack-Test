@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5ef1ce75e790814a9e99c09bc30f0fa, type: 3}
+  m_Name: DropMapping
+  m_EditorClassIdentifier: 
+  entries:
+  - type: 0
+    prefab: {fileID: 919132149155446097, guid: 5a88dc76af9764841b2a2e75a65a1ff8, type: 3}
+    chance: 1
+    minCount: 1
+    maxCount: 2
+  - type: 1
+    prefab: {fileID: 1311676079619618908, guid: a81644c0d262ac94c8a78a4b54ee31ff, type: 3}
+    chance: 1
+    minCount: 0
+    maxCount: 1
+  - type: 3
+    prefab: {fileID: 353496289189106704, guid: 5a822460c94534437b7260f2b7c766dd, type: 3}
+    chance: 1
+    minCount: 1
+    maxCount: 2

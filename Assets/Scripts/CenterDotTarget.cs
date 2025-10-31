@@ -25,7 +25,7 @@ public class CenterDotTarget : MonoBehaviour
 
     void Update()
     {
-        // Ray from center of screen (viewport 0..1)
+        // ray from center of screen (viewport 0..1)
         Ray ray = GetComponent<Camera>().ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
         if (Physics.Raycast(ray, out RaycastHit hit, maxDistance, targetMask, QueryTriggerInteraction.Ignore))
         {

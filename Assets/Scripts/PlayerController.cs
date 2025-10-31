@@ -4,11 +4,9 @@ using UnityEngine;
 public class ClampedLook : MonoBehaviour
 {
     [Header("Refs")]
-    public Transform body;     // player root with rigidbody
+    public Transform body;
 
     [Header("Sensitivity")]
-    // For legacy Input: units are deg per mouse unit per second.
-    // For new Input System: units are deg per pixel.
     public float sensX = 0.15f;
     public float sensY = 0.15f;
     public bool invertY = false;
@@ -21,7 +19,7 @@ public class ClampedLook : MonoBehaviour
     float pitchLocal;
 
     [Header("Speed")]
-    public float moveSpeed = 5.0f;          // walk speed (m/s)
+    public float moveSpeed = 5.0f;
 
     [Header("Camera")]
     public Camera playerCamera;
@@ -33,11 +31,11 @@ public class ClampedLook : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
 
-        // Initialize from current transforms
+        // initialize from current transforms
         yawWorld = body.rotation.eulerAngles.y;
   
 
-        // Keep physics from fighting rotation
+        // keep physics from fighting rotation
         var rb = body.GetComponent<Rigidbody>();
         if (rb)
         {
@@ -51,14 +49,13 @@ public class ClampedLook : MonoBehaviour
         // look around
         Vector2 d = ReadMouseDelta();
 
-        // Yaw = free 360 (no clamp)
+ 
         yawWorld += d.x * sensX;
 
-        // Pitch = clamped
+
         float dy = (invertY ? d.y : -d.y) * sensY;
         pitchLocal = Mathf.Clamp(pitchLocal + dy, pitchMin, pitchMax);
 
-        // Apply
         body.rotation = Quaternion.Euler(0f, yawWorld, 0f);
    
         // move
@@ -96,7 +93,7 @@ public class ClampedLook : MonoBehaviour
             return Mouse.current.delta.ReadValue();
         #endif
 
-        // Legacy Input Manager fallback (frame-scaled axes; DO multiply by dt)
+    
         float mx = Input.GetAxisRaw("Mouse X") * Time.deltaTime * 1000f; // scale to feel similar
         float my = Input.GetAxisRaw("Mouse Y") * Time.deltaTime * 1000f;
         return new Vector2(mx, my);

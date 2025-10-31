@@ -1309,6 +1309,68 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 471828, guid: 19682540d8a014522a319b1cf788aee2, type: 3}
   m_PrefabInstance: {fileID: 515693663}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &632478650
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 945923174}
+    m_Modifications:
+    - target: {fileID: 2953067228481397434, guid: 1a55ff19fdd70a24c82bf15dc42f8837, type: 3}
+      propertyPath: m_Name
+      value: Spider
+      objectReference: {fileID: 0}
+    - target: {fileID: 8562075721190834311, guid: 1a55ff19fdd70a24c82bf15dc42f8837, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -29.50946
+      objectReference: {fileID: 0}
+    - target: {fileID: 8562075721190834311, guid: 1a55ff19fdd70a24c82bf15dc42f8837, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 8562075721190834311, guid: 1a55ff19fdd70a24c82bf15dc42f8837, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -25.985535
+      objectReference: {fileID: 0}
+    - target: {fileID: 8562075721190834311, guid: 1a55ff19fdd70a24c82bf15dc42f8837, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.47105518
+      objectReference: {fileID: 0}
+    - target: {fileID: 8562075721190834311, guid: 1a55ff19fdd70a24c82bf15dc42f8837, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8562075721190834311, guid: 1a55ff19fdd70a24c82bf15dc42f8837, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.88210374
+      objectReference: {fileID: 0}
+    - target: {fileID: 8562075721190834311, guid: 1a55ff19fdd70a24c82bf15dc42f8837, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8562075721190834311, guid: 1a55ff19fdd70a24c82bf15dc42f8837, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8562075721190834311, guid: 1a55ff19fdd70a24c82bf15dc42f8837, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -123.794
+      objectReference: {fileID: 0}
+    - target: {fileID: 8562075721190834311, guid: 1a55ff19fdd70a24c82bf15dc42f8837, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1a55ff19fdd70a24c82bf15dc42f8837, type: 3}
+--- !u!4 &632478651 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8562075721190834311, guid: 1a55ff19fdd70a24c82bf15dc42f8837, type: 3}
+  m_PrefabInstance: {fileID: 632478650}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1806,6 +1868,38 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.915032, y: 2.261283, z: 2.0005488}
   m_Center: {x: 0.009146988, y: 1.1311765, z: -0.0002425313}
+--- !u!1 &945923173
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 945923174}
+  m_Layer: 0
+  m_Name: Spiders
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &945923174
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 945923173}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 982.42944, y: -2.9208248, z: 462.1512}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 632478651}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &997939763
 GameObject:
   m_ObjectHideFlags: 0
@@ -2878,11 +2972,9 @@ MonoBehaviour:
   - {fileID: 1840786633}
   - {fileID: 1194207496}
   duration: 0.18
-  playOnStart: 1
+  returnTime: 0.1
   alignToTangent: 1
   upReference: {x: 0, y: 1, z: 0}
-  previewSamples: 24
-  curveColor: {r: 0, g: 1, b: 1, a: 1}
 --- !u!1001 &1985260329
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3089,3 +3181,4 @@ SceneRoots:
   - {fileID: 295635501}
   - {fileID: 1841482519}
   - {fileID: 349988720}
+  - {fileID: 945923174}
