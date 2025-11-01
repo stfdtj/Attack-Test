@@ -36,29 +36,29 @@ public class Attackable : MonoBehaviour, IDamageable
 
     void Die()
     {
-        TryDrop();
+        //TryDrop();
         if (destroyOnDeath) { Destroy(gameObject); }
     }
 
-    private void TryDrop()
-    {
-        //Debug.Log("Trying to drop loot...");
-        if (dropCatalog == null) return;
+    //private void TryDrop()
+    //{
+    //    //Debug.Log("Trying to drop loot...");
+    //    if (dropCatalog == null) return;
 
-        var entry = dropCatalog.Get(targetType);
-        if (entry == null || entry.prefab == null) { return; }
+    //    var entry = dropCatalog.Get(targetType);
+    //    if (entry == null || entry.prefab == null) { return; }
 
-        if (Random.value <= entry.chance)
-        {
-            int count = Random.Range(entry.minCount, entry.maxCount + 1);
-            for (int i = 0; i < count; i++)
-            {
-                // small random offset so stacks don’t overlap perfectly
-                Vector3 pos = transform.position + new Vector3(
-                    Random.Range(-0.2f, 0.2f), 0.1f, Random.Range(-0.2f, 0.2f));
-                Instantiate(entry.prefab, pos, Quaternion.identity);
-            }
-        }
-    }
+    //    if (Random.value <= entry.chance)
+    //    {
+    //        int count = Random.Range(entry.minCount, entry.maxCount + 1);
+    //        for (int i = 0; i < count; i++)
+    //        {
+    //            // small random offset so stacks don’t overlap perfectly
+    //            Vector3 pos = transform.position + new Vector3(
+    //                Random.Range(-0.2f, 0.2f), 0.1f, Random.Range(-0.2f, 0.2f));
+    //            Instantiate(entry.prefab, pos, Quaternion.identity);
+    //        }
+    //    }
+    //}
 
 }
