@@ -2,3 +2,5 @@
 Temp
 Library
 .vsconfig
+request.py
+__pycache__

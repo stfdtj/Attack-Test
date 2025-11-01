@@ -40,26 +40,6 @@ public class Inventory : MonoBehaviour
         return amount;
     }
 
-    // not using
-    //public int Remove(Item item, int amount = 1)
-    //{
-    //    if (item == null || amount <= 0) return 0;
-
-    //    int i = IndexOf(item);
-    //    if (i < 0) return 0;
-
-    //    int take = Mathf.Min(counts[i], amount);
-    //    counts[i] -= take;
-    //    if (counts[i] <= 0)
-    //    {
-    //        // keep arrays compact
-    //        items.RemoveAt(i);
-    //        counts.RemoveAt(i);
-    //    }
-
-    //    if (take > 0) OnItemRemoved?.Invoke(item, take);
-    //    return take;
-    //}
 
     public int CountOf(Item item)
     {

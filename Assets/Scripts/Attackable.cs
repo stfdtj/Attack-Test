@@ -14,6 +14,7 @@ public class Attackable : MonoBehaviour, IDamageable
 
     [Header("Identity")]
     public TargetType targetType;
+    public int id;
 
     [Header("Loot")]
     public DropCatalog dropCatalog;

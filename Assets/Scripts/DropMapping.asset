@@ -28,3 +28,8 @@ MonoBehaviour:
     chance: 1
     minCount: 1
     maxCount: 2
+  - type: 2
+    prefab: {fileID: 2931599777171156985, guid: 6babded354a0947f5816d671762d9241, type: 3}
+    chance: 1
+    minCount: 1
+    maxCount: 3
