@@ -45,7 +45,7 @@ public class Attackable : MonoBehaviour, IDamageable
         if (dropCatalog == null) return;
 
         var entry = dropCatalog.Get(targetType);
-        if (entry == null || entry.prefab == null) return;
+        if (entry == null || entry.prefab == null) { return; }
 
         if (Random.value <= entry.chance)
         {

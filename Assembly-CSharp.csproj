@@ -56,20 +56,26 @@
   </PropertyGroup>
   <ItemGroup>
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
-    <Analyzer Include="C:\Users\Wuyue\Attack Test\Library\PackageCache\com.unity.collab-proxy@2.10.1\Lib\Editor\Unity.Plastic.Newtonsoft.Json.dll" />
-    <Analyzer Include="C:\Users\Wuyue\Attack Test\Library\PackageCache\com.unity.collab-proxy@2.10.1\Lib\Editor\log4netPlastic.dll" />
-    <Analyzer Include="C:\Users\Wuyue\Attack Test\Library\PackageCache\com.unity.collab-proxy@2.10.1\Lib\Editor\Unity.Plastic.Antlr3.Runtime.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.38f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.SourceGenerators.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.38f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\TargetType.cs" />
+    <Compile Include="Assets\Scripts\PickupItem.cs" />
+    <Compile Include="Assets\Scripts\Inventory.cs" />
     <Compile Include="Assets\Scripts\DropCatalog.cs" />
+    <Compile Include="Assets\Scripts\Transmission.cs" />
     <Compile Include="Assets\Scripts\CenterDotTarget.cs" />
     <Compile Include="Assets\Scripts\Attackable.cs" />
+    <Compile Include="Assets\Scripts\IventorySlot.cs" />
+    <Compile Include="Assets\Scripts\Item.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\gem\GemsAndCrystals\Script\Rotate.cs" />
     <Compile Include="Assets\Scripts\BezierSwordSlash.cs" />
+    <Compile Include="Assets\Scripts\BroadCast.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Pixel Font - Tripfive\_README.txt" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

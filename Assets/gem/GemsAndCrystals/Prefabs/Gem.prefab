@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3076669605551186986}
   - component: {fileID: 3481397416867620178}
   - component: {fileID: 7956604536870212168}
+  - component: {fileID: 8742919250083600862}
   m_Layer: 0
   m_Name: Gem
   m_TagString: Untagged
@@ -131,5 +132,23 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.65, y: 0.65, z: 0.65}
+  m_Size: {x: 1.77, y: 1.77, z: 1.77}
   m_Center: {x: 0, y: -0.046428576, z: 0}
+--- !u!114 &8742919250083600862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1311676079619618908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a8425af2bc2a7644a600890268e0709, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 2
+  displayName: Red Diamond
+  icon: {fileID: 21300000, guid: cdd1e9b47817a734397e72445a4950e5, type: 3}
+  stackable: 1
+  maxStack: 99
+  worldPrefab: {fileID: 1311676079619618908}

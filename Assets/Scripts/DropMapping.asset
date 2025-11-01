@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entries:
   - type: 0
-    prefab: {fileID: 919132149155446097, guid: 5a88dc76af9764841b2a2e75a65a1ff8, type: 3}
+    prefab: {fileID: 7048341185404601719, guid: cfdb452e7316b42e894aa2cb2179004f, type: 3}
     chance: 1
     minCount: 1
     maxCount: 2
